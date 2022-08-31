@@ -1,0 +1,2 @@
+pip3 install ffprobe
+pip3 install ffmpeg

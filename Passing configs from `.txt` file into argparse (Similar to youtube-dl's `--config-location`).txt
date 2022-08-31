@@ -1,0 +1,214 @@
+parser = ArgumentParser(fromfile_prefix_chars='@')
+parser.parse_args()
+
+--config_1
+This is the first config
+--config_2
+2nd Config
+--config_3
+3
+...
+
+ ----------------------- 
+parser = ArgumentParser(fromfile_prefix_chars='@')
+parser.parse_args()
+
+--config_1
+This is the first config
+--config_2
+2nd Config
+--config_3
+3
+...
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3
+
+ ----------------------- 
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import config
+
+print(config.config_1)
+print(config.config_2)
+print(config.config_3)
+
+This is the first config
+2nd config
+3
+
+[DEFAULT]
+config_1 = 'This is the first config'
+config_2 = '2nd config'
+config_3 = 3
+
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+print(config['DEFAULT']['config_1'])
+print(config['DEFAULT']['config_2'])
+print(config['DEFAULT']['config_3'])
+
+This is the first config
+2nd config
+3

@@ -1,0 +1,71 @@
+n_colons = YT_Duration_str.count(":")
+
+if n_colons == 0:
+    d = dt.strptime(YT_Duration_str, "%S")
+elif n_colons == 1:
+    d = dt.strptime(YT_Duration_str, "%M:%S")
+elif n_colons == 2:
+    d = dt.strptime(YT_Duration_str, "%H:%M:%S")
+
+d.strftime("%H:%M:%S")
+
+delta = d - dt.strptime("0", "%S")
+
+ ----------------------- 
+n_colons = YT_Duration_str.count(":")
+
+if n_colons == 0:
+    d = dt.strptime(YT_Duration_str, "%S")
+elif n_colons == 1:
+    d = dt.strptime(YT_Duration_str, "%M:%S")
+elif n_colons == 2:
+    d = dt.strptime(YT_Duration_str, "%H:%M:%S")
+
+d.strftime("%H:%M:%S")
+
+delta = d - dt.strptime("0", "%S")
+
+ ----------------------- 
+*rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+
+&gt;&gt;&gt; YT_Duration_str = '01:02:03'
+&gt;&gt;&gt; *rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+&gt;&gt;&gt; td = datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds)
+&gt;&gt;&gt; td
+datetime.timedelta(seconds=3723)
+
+&gt;&gt;&gt; dt = datetime.datetime.now().replace(hour=hours, minute=minutes, second=seconds, microsecond=0)
+&gt;&gt;&gt; dt
+datetime.datetime(2022, 2, 2, 1, 2, 3)
+&gt;&gt;&gt; dt.strftime('%H:%M:%S')
+'01:02:03'
+
+ ----------------------- 
+*rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+
+&gt;&gt;&gt; YT_Duration_str = '01:02:03'
+&gt;&gt;&gt; *rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+&gt;&gt;&gt; td = datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds)
+&gt;&gt;&gt; td
+datetime.timedelta(seconds=3723)
+
+&gt;&gt;&gt; dt = datetime.datetime.now().replace(hour=hours, minute=minutes, second=seconds, microsecond=0)
+&gt;&gt;&gt; dt
+datetime.datetime(2022, 2, 2, 1, 2, 3)
+&gt;&gt;&gt; dt.strftime('%H:%M:%S')
+'01:02:03'
+
+ ----------------------- 
+*rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+
+&gt;&gt;&gt; YT_Duration_str = '01:02:03'
+&gt;&gt;&gt; *rest, hours, minutes, seconds = [0, 0, *map(int, YT_Duration_str.split(':'))]
+&gt;&gt;&gt; td = datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds)
+&gt;&gt;&gt; td
+datetime.timedelta(seconds=3723)
+
+&gt;&gt;&gt; dt = datetime.datetime.now().replace(hour=hours, minute=minutes, second=seconds, microsecond=0)
+&gt;&gt;&gt; dt
+datetime.datetime(2022, 2, 2, 1, 2, 3)
+&gt;&gt;&gt; dt.strftime('%H:%M:%S')
+'01:02:03'

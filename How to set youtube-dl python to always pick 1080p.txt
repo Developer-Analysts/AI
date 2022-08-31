@@ -1,0 +1,12 @@
+youtube_dl_options = {
+    "format": "mp4[height=1080]", # This will select the specific resolution typed here
+    "outtmpl": "%(title)s-%(id)s.%(ext)s",
+    "restrictfilenames": True,
+    "nooverwrites": True,
+    "writedescription": True,
+    "writeinfojson": True,
+    "writeannotations": True,
+    "writethumbnail": True,
+    "writesubtitles": True,
+    "writeautomaticsub": True
+}

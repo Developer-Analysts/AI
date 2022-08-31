@@ -1,0 +1,1 @@
+description = try_get(response, lambda x: x['result']['video'][0]['summary'], compat_str)

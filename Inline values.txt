@@ -1,0 +1,1 @@
+title = self._html_search_regex(r'&lt;title&gt;([^&lt;]+)&lt;/title&gt;', webpage, 'title')

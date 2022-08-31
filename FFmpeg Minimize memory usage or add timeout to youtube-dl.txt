@@ -1,0 +1,6 @@
+ffmpeg -y -loglevel verbose -headers 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.67 Safari/537.36\
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\
+Accept-Encoding: gzip, deflate\
+Accept-Language: en-us,en;q=0.5' \
+ -i https://36-d4.divas.cloud/CHAN-3792/CHAN-3792_1.stream/chunklist_w70914220.m3u8 -c copy -f mp4 file:playlist-playlist.mp4.part

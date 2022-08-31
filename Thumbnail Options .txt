@@ -1,0 +1,5 @@
+--write-thumbnail                    Write thumbnail image to disk
+--write-all-thumbnails               Write all thumbnail image formats to
+                                     disk
+--list-thumbnails                    Simulate and list all available
+                                     thumbnail formats

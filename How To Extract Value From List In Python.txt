@@ -1,0 +1,134 @@
+import re
+import youtube_dl
+import pandas as pd
+
+# Scrape Online Product
+def run_scraper():
+    ydl_opts = {}
+    all_scrapes = []
+
+    # Read CSV to List
+    with open("single.csv", "r") as f:
+        csv_reader = csv.reader(f)
+        next(csv_reader)
+
+        # Scrape Data From Store
+        for csv_line_entry in csv_reader:
+
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                meta = ydl.extract_info(csv_line_entry[0], download=False)
+                channel = meta["channel"]
+                title = meta["title"]
+                description = meta["description"]
+                twitter_list = get_links(description, "twitter.com")
+
+                print("Channel        :", channel)
+                print("Title          :", title)
+                print("Twitter URLs   :", twitter_list)
+                print("-" * 120)
+                print()
+
+            all_scrapes.append((channel, title, twitter_list))
+
+    return all_scrapes
+
+
+def get_links(description, link):
+    out = []
+
+    # Find URLs in description
+    description_urls = re.findall(r"(https?://[^\s]+)", description)
+
+    for item in description_urls:
+        if link in item:
+            out.append(item)
+
+    return out
+
+
+df = pd.DataFrame(run_scraper(), columns=["channel", "title", "twitter URLs"])
+print(df)
+
+[youtube] kqtD5dpn9C8: Downloading webpage
+Channel        : Programming with Mosh
+Title          : Python for Beginners - Learn Python in 1 Hour
+Twitter URLs   : ['https://twitter.com/moshhamedani']
+------------------------------------------------------------------------------------------------------------------------
+
+[youtube] rfscVS0vtbw: Downloading webpage
+Channel        : freeCodeCamp.org
+Title          : Learn Python - Full Course for Beginners [Tutorial]
+Twitter URLs   : ['https://twitter.com/mike_dane']
+------------------------------------------------------------------------------------------------------------------------
+
+                 channel                                                title                        twitter URLs
+0  Programming with Mosh        Python for Beginners - Learn Python in 1 Hour  [https://twitter.com/moshhamedani]
+1       freeCodeCamp.org  Learn Python - Full Course for Beginners [Tutorial]     [https://twitter.com/mike_dane]
+
+ ----------------------- 
+import re
+import youtube_dl
+import pandas as pd
+
+# Scrape Online Product
+def run_scraper():
+    ydl_opts = {}
+    all_scrapes = []
+
+    # Read CSV to List
+    with open("single.csv", "r") as f:
+        csv_reader = csv.reader(f)
+        next(csv_reader)
+
+        # Scrape Data From Store
+        for csv_line_entry in csv_reader:
+
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                meta = ydl.extract_info(csv_line_entry[0], download=False)
+                channel = meta["channel"]
+                title = meta["title"]
+                description = meta["description"]
+                twitter_list = get_links(description, "twitter.com")
+
+                print("Channel        :", channel)
+                print("Title          :", title)
+                print("Twitter URLs   :", twitter_list)
+                print("-" * 120)
+                print()
+
+            all_scrapes.append((channel, title, twitter_list))
+
+    return all_scrapes
+
+
+def get_links(description, link):
+    out = []
+
+    # Find URLs in description
+    description_urls = re.findall(r"(https?://[^\s]+)", description)
+
+    for item in description_urls:
+        if link in item:
+            out.append(item)
+
+    return out
+
+
+df = pd.DataFrame(run_scraper(), columns=["channel", "title", "twitter URLs"])
+print(df)
+
+[youtube] kqtD5dpn9C8: Downloading webpage
+Channel        : Programming with Mosh
+Title          : Python for Beginners - Learn Python in 1 Hour
+Twitter URLs   : ['https://twitter.com/moshhamedani']
+------------------------------------------------------------------------------------------------------------------------
+
+[youtube] rfscVS0vtbw: Downloading webpage
+Channel        : freeCodeCamp.org
+Title          : Learn Python - Full Course for Beginners [Tutorial]
+Twitter URLs   : ['https://twitter.com/mike_dane']
+------------------------------------------------------------------------------------------------------------------------
+
+                 channel                                                title                        twitter URLs
+0  Programming with Mosh        Python for Beginners - Learn Python in 1 Hour  [https://twitter.com/moshhamedani]
+1       freeCodeCamp.org  Learn Python - Full Course for Beginners [Tutorial]     [https://twitter.com/mike_dane]

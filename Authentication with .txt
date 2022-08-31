@@ -1,0 +1,2 @@
+touch $HOME/.netrc
+chmod a-rwx,u+rw $HOME/.netrc

@@ -1,0 +1,91 @@
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1
+if errorlevel 1 (
+    echo Choco not installed. Installing now..
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+)
+
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1 &amp;&amp; goto :installed || goto :install
+:install
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+:installed
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+commandname 1&gt;out.log 2&gt;error.log
+
+ ----------------------- 
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1
+if errorlevel 1 (
+    echo Choco not installed. Installing now..
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+)
+
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1 &amp;&amp; goto :installed || goto :install
+:install
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+:installed
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+commandname 1&gt;out.log 2&gt;error.log
+
+ ----------------------- 
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1
+if errorlevel 1 (
+    echo Choco not installed. Installing now..
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+)
+
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+
+@echo off
+(where choco.exe)&gt;nul 2&gt;&amp;1 &amp;&amp; goto :installed || goto :install
+:install
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+:installed
+choco install youtube-dl
+set /p input="Enter Link For Playlist:" 
+set /p index="Enter Index For videos Seprated by ',':"
+mkdir playlist_videos
+cd playlist_videos
+youtube-dl --playlist-items %index% %input%
+
+commandname 1&gt;out.log 2&gt;error.log

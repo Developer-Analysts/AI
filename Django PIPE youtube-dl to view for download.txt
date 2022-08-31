@@ -1,0 +1,16 @@
+def download_clip(request, pk):
+    ydl_opts = {
+        'outtmpl': f"{pk}.mp4"
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([f"https://clips.twitch.tv/{pk}"])
+
+    path = f"{pk}.mp4"
+    file_path = os.path.join(path)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/force-download")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            os.remove(file_path)
+            return response
+    raise Http404
